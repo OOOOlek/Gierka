@@ -45,7 +45,7 @@ public class PlayerController : MonoBehaviour
         //pomn� przez pr�dko�� obrotu
         rotation *= rotationSpeed;
         //dodaj obr�t do obiektu
-        //nie mo�emy u�y� += poniewa� unity u�ywa Quaternion�w do zapisu rotacji
+        //nie mozemy u�y� += poniewa� unity u�ywa Quaternion�w do zapisu rotacji
         transform.Rotate(rotation);
 
     }
