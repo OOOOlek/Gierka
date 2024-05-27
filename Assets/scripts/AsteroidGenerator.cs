@@ -14,7 +14,7 @@ public class AsteroidGenerator : MonoBehaviour
     {
         //przypisuje do zmiennej model obiekt-pojemnik zawieraj¹cy kostki
         //bêd¹ce czêœci¹ modelu asteroidy
-        model = transform.Find("Model").gameObject;
+        //model = transform.Find("Model").gameObject;
 
         //przygotuj generator liczb losowych
         //Random r = new Random();
@@ -22,6 +22,7 @@ public class AsteroidGenerator : MonoBehaviour
         // system.random
 
         //iteruj przez czêœci modelu
+        /* 
         foreach (Transform cube in model.transform)
         {
             //u¿yj wbudowanego random.rotation
@@ -31,9 +32,10 @@ public class AsteroidGenerator : MonoBehaviour
             float scale = Random.Range(0.9f, 1.1f);
 
             //przeskaluj
-            cube.localScale = new Vector3(scale, scale, scale);
-
+            cube.localScale = new Vector3 (scale, scale, scale);
+       
         }
+       */
 
         //wylosuj jednorazowo rotacje/s naszej asteroidy
         rotation.x = Random.value;
@@ -46,6 +48,6 @@ public class AsteroidGenerator : MonoBehaviour
     void Update()
     {
         //obróæ asteroidê (model) w wyznaczonym kierunku
-        model.transform.Rotate(rotation * Time.deltaTime);
+        transform.Rotate(rotation * Time.deltaTime);
     }
 }
